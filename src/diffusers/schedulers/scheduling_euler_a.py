@@ -38,7 +38,7 @@ def t_to_sigma(t,sigmas):
 
 def get_sigmas(sigmas, n=None):
     if n is None:
-        return append_zero(sigmas.flip(0))
+        return append_zero(np.flip(sigmas, 0))
     t_max = len(sigmas) - 1 # = 999
     t = torch.linspace(t_max, 0, n, device="cpu")
     # t = torch.linspace(t_max, 0, n, device=sigmas.device)
